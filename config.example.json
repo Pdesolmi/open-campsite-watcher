@@ -1,0 +1,13 @@
+{
+  "title": "Yosemite Valley",
+  "campgrounds": {
+    "232447": "Upper Pines",
+    "232450": "Lower Pines",
+    "232449": "North Pines"
+  },
+  "nights": ["2026-07-03", "2026-07-04"],
+  "expire_after": "2026-07-08T07:00:00Z",
+  "max_repeats": 3,
+  "poll_seconds": 120,
+  "launchd_label": "com.user.campsite-watcher"
+}

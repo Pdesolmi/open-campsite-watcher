@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  macOS launchd template. To install:
+    1. Edit the paths below (REPO_DIR → absolute path to this repo,
+       PYTHON → output of `which python3`).
+    2. Rename to match your config's "launchd_label", e.g.
+       com.user.campsite-watcher.plist
+    3. cp it to ~/Library/LaunchAgents/
+    4. launchctl load ~/Library/LaunchAgents/com.user.campsite-watcher.plist
+
+  StartInterval is in seconds — keep it >= 120 to be polite to recreation.gov.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.campsite-watcher</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>PYTHON</string>
+        <string>REPO_DIR/campsite_watcher.py</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>120</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>REPO_DIR/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>REPO_DIR/launchd.err.log</string>
+</dict>
+</plist>
