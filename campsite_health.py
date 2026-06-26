@@ -57,7 +57,11 @@ def main() -> None:
     ap.add_argument("--config", default=str(HERE / "config.json"))
     args = ap.parse_args()
 
-    cfg = json.loads(Path(args.config).read_text())
+    cfg_path = Path(args.config)
+    if not cfg_path.exists():
+        print(f"No config at {cfg_path}. Copy config.example.json → config.json first.")
+        return
+    cfg = json.loads(cfg_path.read_text())
     title = cfg.get("title", "Campsite")
     label = cfg.get("launchd_label", "")
     log_file = HERE / cfg.get("log_file", "watch.log")

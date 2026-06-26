@@ -175,7 +175,12 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    cfg = load_config(Path(args.config))
+    cfg_path = Path(args.config)
+    if not cfg_path.exists():
+        print(f"No config at {cfg_path}.\nCopy config.example.json → config.json "
+              f"and edit it (campgrounds + nights).", file=sys.stderr)
+        return 1
+    cfg = load_config(cfg_path)
 
     if expired(cfg):
         log(cfg, "EXPIRED (past expire_after) — stopping")
