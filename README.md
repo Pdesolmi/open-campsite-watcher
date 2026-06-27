@@ -33,23 +33,13 @@ do the same for any campground on recreation.gov.
 > 🤖 **Bonus:** it ships as a [**Claude skill**](#-claude-skill) — so you can
 > set it up and reconfigure it in plain English instead of editing JSON.
 
-<!-- TODO: add a real alert screenshot at assets/alert.png and uncomment:
 <div align="center">
-<img src="assets/alert.png" alt="Telegram cancellation alert" width="420">
-<br><sub>A real cancellation alert — site, nights, and a one-tap Add-to-Cart link.</sub>
-</div>
--->
 
-> **What an alert looks like:**
-> ```
-> 🏕️ YOSEMITE VALLEY — spot(s) opened!
->
-> Upper Pines
->   • Site 106 · loop UP · STANDARD NONELECTRIC → Jul 3
->     👉 TAP → Add to Cart (site 106)
->
-> ⚡ Add to Cart holds it ~15 min. Tap, pick the night, pay.
-> ```
+<img src="assets/alert.png" alt="A real Telegram cancellation alert: Upper Pines site 144 opened for Jul 3 and Jul 4, with a one-tap Add-to-Cart link" width="560">
+
+<sub>A real alert that caught this repo's author a Yosemite Valley site for the July 4th weekend — site, nights, and a one-tap Add-to-Cart link.</sub>
+
+</div>
 
 ---
 
